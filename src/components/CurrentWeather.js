@@ -38,7 +38,7 @@ const CurrentWeather = ({ data, location, userReject, cityId }) => {
       </h2>
       <h3 className="mb-0">{data.main.temp}°C</h3>
       <img
-        src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
+        src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
         alt="Weather condition"
       />
       <h4 className="mb-4 text-capitalize">{data.weather[0].description}</h4>

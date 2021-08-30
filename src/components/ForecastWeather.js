@@ -60,7 +60,7 @@ const ForecastWeather = ({ data, searchForecast, invalidForecast }) => {
         >
           <h5 className="mb-0">{hour}:00</h5>
           <img
-            src={`http://openweathermap.org/img/wn/${list[index].weather[0].icon}@2x.png`}
+            src={`https://openweathermap.org/img/wn/${list[index].weather[0].icon}@2x.png`}
             alt="Weather condition"
             className="ml-auto ml-lg-0"
           />

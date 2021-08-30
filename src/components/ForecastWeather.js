@@ -51,6 +51,14 @@ const ForecastWeather = ({ data, searchForecast, invalidForecast }) => {
   const { list } = data;
   let date = "";
 
+  const weatherImgUrl = (iconUrl) => {
+    if (window.location.protocol === 'http:') {
+      return `http://openweathermap.org/img/wn/${iconUrl}@2x.png`;
+    } else {
+      return `https://openweathermap.org/img/wn/${iconUrl}@2x.png`
+    }
+  };
+
   const renderDivs = (i) => {
     const divJSX = (hour, index) => {
       return (
@@ -60,7 +68,7 @@ const ForecastWeather = ({ data, searchForecast, invalidForecast }) => {
         >
           <h5 className="mb-0">{hour}:00</h5>
           <img
-            src={`https://openweathermap.org/img/wn/${list[index].weather[0].icon}@2x.png`}
+            src={weatherImgUrl(list[index].weather[0].icon)}
             alt="Weather condition"
             className="ml-auto ml-lg-0"
           />

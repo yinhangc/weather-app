@@ -1,0 +1,74 @@
+$theme-colors: (
+  "grey": rgba(122, 130, 136, 0.1),
+);
+
+@import "~bootstrap/scss/bootstrap.scss";
+
+body {
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 1.2rem;
+  background: no-repeat url("../img/background.jpeg");
+  background-size: cover;
+  min-height: 100vh;
+  height: 100%;
+}
+
+// prettier-ignore
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+h1 {
+  letter-spacing: 1.5px;
+}
+
+.container {
+  max-width: 1120px;
+}
+
+table.table {
+  width: 80%;
+}
+
+.table thead th {
+  border: 0;
+}
+
+.table thead th button {
+  float: right;
+}
+
+.table td {
+  border-top: 1px solid #686868;
+  text-align: right;
+}
+
+tr td:first-child {
+  width: 45%;
+  text-align: left;
+}
+
+.forecastTitle {
+  letter-spacing: 1px;
+
+  span {
+    background-color: #fff;
+    border-radius: 0.25rem;
+    padding: 0.1rem 0.5rem;
+  }
+}
+
+.accordion .card {
+  cursor: pointer;
+  background-color: rgba(122, 130, 136, 0.1);
+}
+
+@media (max-width: 680px) {
+  html {
+    font-size: 0.8rem;
+  }
+
+  table.table {
+    width: 100%;
+  }
+}
